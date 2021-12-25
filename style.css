@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #3399ff;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: minmax(500px, auto);
+  grid-template-areas: 
+    'egg'
+    'brand'
+    'cocktail'
+    'audience'
+    'graphic'
+    'photo'
+    ;
+  
+}
+
+div {
+  background: #3399ff;
+  color: white;
+  text-align: center;
+}
+
+.text-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-height: 400px;
+}
+
+.text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 45px;
+  min-height: 400px;
+}
+
+.text-banner h3, .text-bottom h3 {
+  font-size: 36px;
+}
+
+.text-banner p, .text-bottom p {
+  font-size: 18px;
+  max-width: 35ch;
+}
+
+.text-bottom p {
+  padding-bottom: 15px;
+}
+
+.bg-1 {
+  background-image: url('https://picsum.photos/id/1015/600');
+  background-repeat: no-repeat;
+  background-size: 100% 100%
+}
+
+.bg-2 {
+  background-image: url('https://picsum.photos/id/1016/600');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.container div:nth-child(1){
+  grid-area: egg;
+}
+
+.container div:nth-child(2){
+  grid-area: brand;
+}
+
+.container div:nth-child(3){
+  grid-area: cocktail;
+}
+
+.container div:nth-child(4){
+  grid-area: audience;
+}
+
+.container div:nth-child(5){
+  grid-area: graphic;
+}
+
+.container div:nth-child(6){
+  grid-area: photo;
+}
+
+@media (min-width: 60em) {
+  .container{
+    grid-template-areas:
+      'egg brand'
+      'audience cocktail'
+      'graphic photo';
+  }
+}
